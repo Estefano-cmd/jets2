@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External -->
+    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="../css/principal.css">
+
+    <!-- Jquery -->
+    <script src="../external/js/jquery-3.4.1.min.js"></script>
+    <title>Jets</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" id="titulo">JETS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./menu.html">Inicio <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logOut">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="containerTable">
+        <table class="table table-responsive table-bordered" id='data_table'>
+            <thead>
+                <tr>
+                    <th>Celular</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="row_phone1">60906650</td>
+                    <td>Martin</td>
+                    <td>Calero</td>
+                    <td class="row_botton1"><a type="submit" class="btn btn-primary" id="ws1" href="https://api.whatsapp.com/send?phone=+59177089466&text=Estudiante%20iscrito%20a%20los%20JETS,%20sus%20datos%20son:%0ARegistro:%20565350%0ACI:%207807074%0ACelular:%2060906650">ok</a></td>
+                    <td><input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')"></td>
+                </tr>
+                <tr>
+                    <td id="row_phone2">60906650</td>
+                    <td>Martin</td>
+                    <td>Calero</td>
+                    <td class="row_botton2"><a type="submit" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=+59177089466&text=Estudiante%20iscrito%20a%20los%20JETS,%20sus%20datos%20son:%0ARegistro:%20565350%0ACI:%207807074%0ACelular:%2060906650">ok</a></td>
+                    <td><input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')"></td>
+                </tr>
+                <tr>
+                    <td id="row_phone3">60906650</td>
+                    <td>Martin</td>
+                    <td>Calero</td>
+                    <td class="row_botton3"><a type="submit" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=+59177089466&text=Estudiante%20iscrito%20a%20los%20JETS,%20sus%20datos%20son:%0ARegistro:%20560021%0ACI:%207807074%0ACelular:%2060906650" disable='true'>ok</a></td>
+                    <td><input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="contenedorForm">
+
+        </div>
+        <div class="col-12">
+            <a class="btn btn-primary" type="submit" id="inscribir" href="https://api.whatsapp.com/send?phone=+59177089466&text=Inscripciones%20realizadas%20por%20el%20docente%20Ing.%20Deyby%20Baner">Generar lista de Inscritos</a>
+        </div>
+        </div>
+    </main>
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+          <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+    <!-- external -->
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
+
+    <script src="../js/modificar_numero.js"></script>
+</body>
+</html>
