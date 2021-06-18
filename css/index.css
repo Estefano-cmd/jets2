@@ -45,5 +45,14 @@ label,h1 {
     color: gray !important;
 }
 
+label {
+    margin-left: 10px;
+}
+
+.form-control {
+    width: 85%;
+    margin: 0 auto;
+}
+
 
 
