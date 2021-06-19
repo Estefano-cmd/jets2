@@ -1,27 +1,21 @@
 @font-face {
-    font-family: "NFL_RedZone";
-    src: url(../fonts/NFL_RedZone.ttf);
+  font-family: "NFL_RedZone";
+  src: url(../fonts/NFL_RedZone.ttf);
 }
 
-:root {
+/* :root {
     --color-fondo : rgba(0, 0, 0, 0.8);
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-}
+} */
 
 /* .navbar {
     padding: .5rem 1rem;
 } */
 
-
-body {
-    width: 100vw;
-    /* background-color: var(--color-fondo); */
-    background-image: url(../external/img/timon.png);
-    background-size: cover;
-}
+/* background-color: var(--color-fondo); */
 
 /* 
 nav{
@@ -146,3 +140,56 @@ footer {
     width: 200px !important;
     height: 350px;
 } */
+
+body {
+  background-image: url(../external/img/timon.png);
+  background-size: cover;
+}
+
+.bg-dark {
+  background-color: #cf0a2c !important;
+}
+
+.menu-principal {
+  height: 90vh;
+}
+
+.datos {
+  height: 40%;
+  padding: 60px 0 0 0;
+  align-content: center;
+}
+
+.botones {
+  height: 60%;
+  align-content: space-evenly;
+}
+
+.boton {
+  height: 14%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+span,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a {
+    color: black;
+    font-weight: 700;
+}

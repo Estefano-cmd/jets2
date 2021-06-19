@@ -3,67 +3,105 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
 
     <title>Hello, world!</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
-
-        <!-- Toggler/collapsibe Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="../www/index.html">Salir</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
-      <h1>My First Bootstrap Page</h1>
-      <p>This is some text.</p>
+    </header>
 
-      <footer></footer>
-    </div>
+    <main class="flex-shrink-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 my-3 pt-3">
+            <img
+              src="../external/img/iconos/man final.png"
+              alt="Eniun"
+              class="img-fluid"
+            />
+            <h4>Martin Calero</h4>
+            <h4>60906650</h4>
+          </div>
+        </div>
+      </div>
+      <div class="Menu">
+        <div class="row">
+          <div class="col-12 my-3 pt-3">
+            <h4></h4>
+          </div>
+          <div class="botones">
+            <div class="col-12">
+              <a
+                class="btn btn-primary"
+                type="button"
+                href="./cronograma_est.html"
+                >CRONOGRAMA</a
+              >
+            </div>
+            <div class="col-12">
+              <a
+                class="btn btn-primary"
+                type="button"
+                href="./inscripcion_est.html"
+                >INSCRIPCIÓN</a
+              >
+            </div>
+            <div class="col-12">
+              <a
+                class="btn btn-primary"
+                type="button"
+                href="./convocatorias.html"
+                >CONVOCATORIAS</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container footer-copyright text-center">
+        <span class="text-muted">© 2021 Copyright:</span>
+        <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+      </div>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
   </body>

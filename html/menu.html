@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- External -->
+    <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="../external/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css"> -->
 
     <link rel="stylesheet" href="../css/principal.css" />
 
@@ -22,108 +20,92 @@
     <script src="../external/js/jquery-3.4.1.min.js"></script>
     <title>Jets</title>
   </head>
-  <body class="d-flex flex-column h-100">
-    <!-- Barra de Navegación -->
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> -->
-        <a class="navbar-brand" href="#" id="titulo">JETS</a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarColor02"
-          aria-controls="navbarColor02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" id="logOut" href="../www/index.html">Salir</a>
-            </li>
-          </ul>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JETS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="../www/index.html"
+                  >Salir</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
-    <!-- Cuerpo de la aplicación -->
-    <main>
-      <!-- <div class="container">
-            <img src="../external/img/iconos/man final.png" alt="Eniun" class="img-fluid">
-        </div> -->
-      <div class="container">
-        <div class="row">
-          <div class="col-12 my-3 pt-3">
+    <main class="container-fluid">
+      <div class="container menu-principal">
+        <div class="row datos">
+          <div class="col">
             <img
               src="../external/img/iconos/man final.png"
               alt="Eniun"
               class="img-fluid"
             />
+          </div>
+          <div class="col" style="align-self: center;">
             <h4>Martin Calero</h4>
             <h4>60906650</h4>
           </div>
         </div>
-      </div>
-      <div class="Menu">
-        <div class="row">
-          <div class="col-12 my-3 pt-3">
-            <h4></h4>
+        <div class="row row-cols-1 botones">
+          <div class="col boton">
+            <a
+              class="btn"
+              type="button"
+              href="./cronograma_est.html"
+              >CRONOGRAMA</a
+            >
           </div>
-          <div class="botones">
-            <div class="col-12">
-              <a
-                class="btn btn-primary"
-                type="button"
-                href="./cronograma_est.html"
-                >CRONOGRAMA</a
-              >
-            </div>
-            <div class="col-12">
-              <a
-                class="btn btn-primary"
-                type="button"
-                href="./inscripcion_est.html"
-                >INSCRIPCIÓN</a
-              >
-            </div>
-            <div class="col-12">
-              <a
-                class="btn btn-primary"
-                type="button"
-                href="./convocatorias.html"
-                >CONVOCATORIAS</a
-              >
-            </div>
+          <div class="col boton">
+            <a
+              class="btn"
+              type="button"
+              href="./inscripcion_est.html"
+              >INSCRIPCIÓN</a
+            >
+          </div>
+          <div class="col boton">
+            <a class="btn" type="button" href="./convocatorias.html"
+              >CONVOCATORIAS</a
+            >
           </div>
         </div>
       </div>
     </main>
-    <footer class="page-footer font-small">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">
-        © 2021 Copyright:
+
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container footer-copyright text-center">
+        <span>© 2021 Copyright:</span>
         <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
       </div>
-      <!-- Copyright -->
     </footer>
 
     <!-- external -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="../external/js/bootstrap.bundle.min.js"></script>
-    <script src="../external/js/sweetalert2@8.js"></script> -->
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
 
     <script src="../js/conexion.js"></script>
   </body>
