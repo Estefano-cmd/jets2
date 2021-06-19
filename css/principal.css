@@ -11,15 +11,19 @@
     box-sizing: border-box;
 }
 
+/* .navbar {
+    padding: .5rem 1rem;
+} */
+
 
 body {
-    height: 100vh;
     width: 100vw;
-    background-color: var(--color-fondo);
+    /* background-color: var(--color-fondo); */
     background-image: url(../external/img/timon.png);
-    background-size: cover;    
+    background-size: cover;
 }
 
+/* 
 nav{
     background-color: #cf0a2c !important;
     box-sizing: border-box;
@@ -46,10 +50,9 @@ footer {
     text-align: center;
  }
 
- /* .container{
-     padding: 30px 0 0 5px;
-     height: 200px;
- } */
+ .container{
+     height: 50%;
+ }
 
 .container .row img{
     width: 140px;
@@ -67,7 +70,7 @@ footer {
 }
 
 .Menu{
-    padding: 30px 0 0 5px;
+    height: 50%;
 }
 
 .Menu .row img{
@@ -142,4 +145,4 @@ footer {
 .d-block{
     width: 200px !important;
     height: 350px;
-}
+} */
