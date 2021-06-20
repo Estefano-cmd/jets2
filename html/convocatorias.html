@@ -1,88 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- External -->
-    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/principal.css" />
 
     <!-- Jquery -->
     <script src="../external/js/jquery-3.4.1.min.js"></script>
     <title>Jets</title>
-</head>
-<body>
+  </head>
+  <body class="d-flex flex-column h-100">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a class="navbar-brand" href="#" id="titulo">JETS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
-                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./menu.html">Inicio <span class=" sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./inscripcion_est.html">Inscripción</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="logOut">Salir</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JETS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html"
+                  >Inicio
+                  <!-- <span class=" sr-only">(current)</span> -->
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./inscripcion_est.html"
+                  >Inscripción</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="../www/index.html"
+                  >Salir</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-        <div class="Menu">
-            <div class="row">
-                <div class="col-12 my-3 pt-3">
-                    <h4>Menú</h4>
-            	</div>
-                <div class="botones2">
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./Desafio_extremo.html">DESAFÍO EXTREMO</a>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./Drones.html">CARRERA DE DRONES</a>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./proyectos.html">FERIA DE PROYECTOS</a>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./olimpiadas.html">OLIMPIADAS</a>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./rally.html">RALLY MATEMÁTICO</a>
-                </div>
-                <div class="col-12">
-                    <a class="btn btn-primary" type="button" href="./talento.html">CONCURSO DE TALENTOS</a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="page-footer font-small blue">
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2021 Copyright:
-          <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+    <main class="container-fluid">
+      <div class="container menu-convocatorias">
+        <div class="row row-cols-1 row-cols-sm-2 g-4">
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/extremo.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">DESAFÍO EXTREMO</h5>
+                <a href="./Desafio_extremo.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/drones.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">CARRERA DE DRONES</h5>
+                <a href="./Drones.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/proyectos.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">FERIA DE PROYECTOS</h5>
+                <a href="./proyectos.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/olimpiadas.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">OLIMPIADAS</h5>
+                <a href="./olimpiadas.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/matematico.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">RALLY MATEMÁTICO</h5>
+                <a href="./rally.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <img src="../external/img/convocatorias/talentos.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">CONCURSO DE TALENTOS</h5>
+                <a href="./talento.html" class="btn">Incribirme</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Copyright -->
-      
-      </footer>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container footer-copyright text-center">
+        <span>© 2021 Copyright:</span>
+        <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+      </div>
+    </footer>
+
     <!-- external -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
     <script src="../external/js/bootstrap.bundle.min.js"></script>
     <script src="../external/js/sweetalert2@8.js"></script>
-</body>
+  </body>
 </html>
