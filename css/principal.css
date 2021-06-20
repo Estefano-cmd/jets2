@@ -196,9 +196,8 @@ a {
 }
 
 footer a {
-  background-color: black;
-  color: white;
-  padding: 5px;
+  color: black;
+  font-weight: 700;
 }
 
 .menu-convocatorias {
@@ -212,6 +211,8 @@ footer a {
 }
 
 .descargar {
-    color: black;
-    font-weight: 600;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }

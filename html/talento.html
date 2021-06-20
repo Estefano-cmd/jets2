@@ -1,85 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- External -->
-    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/principal.css" />
 
     <!-- Jquery -->
     <script src="../external/js/jquery-3.4.1.min.js"></script>
     <title>Jets</title>
-</head>
-<body>
+  </head>
+  <body class="d-flex flex-column h-100">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a class="navbar-brand" href="#" id="titulo">JETS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
-                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./menu.html">Inicio <span class=" sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./inscripcion_est.html">Inscripción</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./convocatorias.html">Convocatorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="logOut">Salir</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JETS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./inscripcion_est.html"
+                  >Inscripción</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./convocatorias.html"
+                  >Convocatorias</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="../www/index.html"
+                  >Salir</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        
-        <object data="../external/pdf/CONVOCATORIA DESAFIO EXTREMO 2021.pdf" type="application/pdf" width="80%" height="80%">
-
-            <p>Tu navegador no tiene el plugin para previsualizar documentos pdf.</p>
-            <p>Puedes descargarte el archivo desde <a href="../external/pdf/CONVOCATORIA TALENTOS JETS 2021.pdf">aquí</a></p>
-            
+    <main class="container-fluid">
+      <div class="container menu-convo">
+        <object
+          data="../external/pdf/CONVOCATORIA DESAFIO EXTREMO 2021.pdf"
+          type="application/pdf"
+          width="80%"
+          height="80%"
+        >
+          <p>
+            Puedes descargarte la convocatoria desde
+            <a
+              class="descargar"
+              href="../external/pdf/CONVOCATORIA TALENTOS JETS 2021.pdf"
+              >aquí</a
+            >
+          </p>
         </object>
-        <div class="container2">
-            <div class="row">
-            	<div class="col-12 my-3 pt-3">
-                    <img src="../external/img/convocatorias/talento.png" alt="Eniun" class="img-fluid">
-                    <h4>Nombre</h4>
-            		<h4>Celular</h4>
-            	</div>
+        
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              value="Mark"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              value="Otto"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label"
+              >Username</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">Please choose a username.</div>
             </div>
-        </div>
-        <div id="NombreGrp">
-            <input type="text">
-        </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid city.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid state.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid zip.</div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn" type="submit">Submit form</button>
+          </div>
+        </form>
+      </div>
     </main>
 
-    <footer class="page-footer font-small blue">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2021 Copyright:
-          <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+    <!-- <main>
+      <object
+        data="../external/pdf/CONVOCATORIA DESAFIO EXTREMO 2021.pdf"
+        type="application/pdf"
+        width="80%"
+        height="80%"
+      >
+        <p>
+          Tu navegador no tiene el plugin para previsualizar documentos pdf.
+        </p>
+        <p>
+          Puedes descargarte el archivo desde
+          <a href="../external/pdf/CONVOCATORIA TALENTOS JETS 2021.pdf">aquí</a>
+        </p>
+      </object>
+      <div class="container2">
+        <div class="row">
+          <div class="col-12 my-3 pt-3">
+            <img
+              src="../external/img/convocatorias/talento.png"
+              alt="Eniun"
+              class="img-fluid"
+            />
+            <h4>Nombre</h4>
+            <h4>Celular</h4>
+          </div>
         </div>
-        <!-- Copyright -->
-      
-      </footer>
+      </div>
+      <div id="NombreGrp">
+        <input type="text" />
+      </div>
+    </main> -->
+
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container footer-copyright text-center">
+        <span>© 2021 Copyright:</span>
+        <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+      </div>
+    </footer>
+
     <!-- external -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
     <script src="../external/js/bootstrap.bundle.min.js"></script>
     <script src="../external/js/sweetalert2@8.js"></script>
-</body>
+  </body>
 </html>
