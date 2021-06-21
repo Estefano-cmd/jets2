@@ -144,12 +144,17 @@ footer {
 body {
   background-image: url(../external/img/timon.png);
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  background-clip: border-box;
 }
 
 .bg-dark {
   background-color: #cf0a2c !important;
+}
+
+.navbar-brand {
+  font-family: 'NFL_RedZone';
 }
 
 .nav-item {
@@ -196,7 +201,7 @@ a {
 }
 
 footer a {
-  color: black;
+  /* text-decoration: underline; */
   font-weight: 700;
 }
 
@@ -215,4 +220,38 @@ footer a {
     color: white;
     padding: 5px;
     border-radius: 5px;
+}
+
+.agr-participante {
+  background-color: #198754;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  opacity: 1;
+}
+
+.agr-participante:active {
+  opacity: .9;
+}
+
+.menu-cronograma {
+  padding: 55px 0;
+}
+
+.carousel-item {
+  margin: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.avatars {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.carousel-item .img-fluid {
+  width: 50%;
+  margin: 0 auto;
 }

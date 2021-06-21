@@ -13,6 +13,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
     <link rel="stylesheet" href="../css/principal.css" />
 
     <!-- Jquery -->
@@ -83,115 +88,331 @@
         </object>
         <form class="row g-3 needs-validation" novalidate>
           <div class="col-md-4">
-            <label for="validationCustom01" class="form-label"
-              >First name</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom01"
-              value="Mark"
-              required
-            />
-            <div class="valid-feedback">Looks good!</div>
+            <label for="nom-equipo" class="form-label">Nombre del equipo</label>
+            <input type="text" class="form-control" id="nom-equipo" required />
+            <div class="invalid-feedback">
+              Debe proporcionar el nombre de su equipo
+            </div>
           </div>
           <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Last name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom02"
-              value="Otto"
-              required
-            />
-            <div class="valid-feedback">Looks good!</div>
-          </div>
-          <div class="col-md-4">
-            <label for="validationCustomUsername" class="form-label"
-              >Username</label
+            <label for="person1" class="form-label"
+              >Datos del participante 1</label
             >
             <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i class="bi bi-wallet-fill"></i></span>
+                <select class="form-select" id="carrera1" required>
+                  <option selected disabled value="">Escoge una carrera...</option>
+                  <option>Administración General</option>
+                  <option>Administración de Turismo</option>
+                  <option>Ingeniería Comercial</option>
+                  <option>Comercio Internacional</option>
+                  <option>Ingeniería en Marketing y Publicidad</option>
+                  <option>Contaduría Pública</option>
+                  <option>Ingeniería Financiera</option>
+                  <option>Comunicación Estratégica y Digital</option>
+                  <option>Ingeniería Industrial y Comercial</option>
+                  <option>Ingeniería en Administración Petrolera</option>
+                  <option>Ingeniería Electrónica y Sistemas</option>
+                  <option>Ingeniería Mecánica Automotriz y Agroindustrial</option>
+                  <option>Ingeniería de Sistemas</option>
+                  <option>Ingeniería en Redes y Telecomunicaciones</option>
+                  <option>Ingeniería Eléctrica</option>
+                  <option>Derecho</option>
+                  <option>Relaciones Internacionales</option>
+                  <option>Psicología</option>
+                </select>
+              <div class="invalid-feedback">La carrera es obligatoria</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend" style="font-weight: 500;"
+                >00</span>
+              <input
+                type="number"
+                class="form-control"
+                id="registro1"
+                placeholder="Número de registro"
+                required
+              />
+              <div class="invalid-feedback">El número de registro es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
               <input
                 type="text"
                 class="form-control"
-                id="validationCustomUsername"
-                aria-describedby="inputGroupPrepend"
+                id="nombre1"
+                placeholder="Nombre(s)"
                 required
               />
-              <div class="invalid-feedback">Please choose a username.</div>
+              <div class="invalid-feedback">El nombre es obligatorio</div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <label for="validationCustom03" class="form-label">City</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom03"
-              required
-            />
-            <div class="invalid-feedback">Please provide a valid city.</div>
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom04" class="form-label">State</label>
-            <select class="form-select" id="validationCustom04" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-            <div class="invalid-feedback">Please select a valid state.</div>
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom05" class="form-label">Zip</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom05"
-              required
-            />
-            <div class="invalid-feedback">Please provide a valid zip.</div>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
               <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="invalidCheck"
+                type="text"
+                class="form-control"
+                id="apellido1"
+                placeholder="Apellido(s)"
                 required
               />
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
+              <div class="invalid-feedback">Los apellidos son obligatorios</div>
             </div>
           </div>
+          <div class="col-md-4">
+            <label for="person2" class="form-label"
+              >Datos del participante 2</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i class="bi bi-wallet-fill"></i></span>
+                <select class="form-select" id="carrera2" required>
+                  <option selected disabled value="">Escoge una carrera...</option>
+                  <option>Administración General</option>
+                  <option>Administración de Turismo</option>
+                  <option>Ingeniería Comercial</option>
+                  <option>Comercio Internacional</option>
+                  <option>Ingeniería en Marketing y Publicidad</option>
+                  <option>Contaduría Pública</option>
+                  <option>Ingeniería Financiera</option>
+                  <option>Comunicación Estratégica y Digital</option>
+                  <option>Ingeniería Industrial y Comercial</option>
+                  <option>Ingeniería en Administración Petrolera</option>
+                  <option>Ingeniería Electrónica y Sistemas</option>
+                  <option>Ingeniería Mecánica Automotriz y Agroindustrial</option>
+                  <option>Ingeniería de Sistemas</option>
+                  <option>Ingeniería en Redes y Telecomunicaciones</option>
+                  <option>Ingeniería Eléctrica</option>
+                  <option>Derecho</option>
+                  <option>Relaciones Internacionales</option>
+                  <option>Psicología</option>
+                </select>
+              <div class="invalid-feedback">La carrera es obligatoria</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend" style="font-weight: 500;"
+                >00</span>
+              <input
+                type="number"
+                class="form-control"
+                id="registro2"
+                placeholder="Número de registro"
+                required
+              />
+              <div class="invalid-feedback">El número de registro es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre2"
+                placeholder="Nombre(s)"
+                required
+              />
+              <div class="invalid-feedback">El nombre es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido2"
+                placeholder="Apellido(s)"
+                required
+              />
+              <div class="invalid-feedback">Los apellidos son obligatorios</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="person3" class="form-label"
+              >Datos del participante 3</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i class="bi bi-wallet-fill"></i></span>
+                <select class="form-select" id="carrera3" required>
+                  <option selected disabled value="">Escoge una carrera...</option>
+                  <option>Administración General</option>
+                  <option>Administración de Turismo</option>
+                  <option>Ingeniería Comercial</option>
+                  <option>Comercio Internacional</option>
+                  <option>Ingeniería en Marketing y Publicidad</option>
+                  <option>Contaduría Pública</option>
+                  <option>Ingeniería Financiera</option>
+                  <option>Comunicación Estratégica y Digital</option>
+                  <option>Ingeniería Industrial y Comercial</option>
+                  <option>Ingeniería en Administración Petrolera</option>
+                  <option>Ingeniería Electrónica y Sistemas</option>
+                  <option>Ingeniería Mecánica Automotriz y Agroindustrial</option>
+                  <option>Ingeniería de Sistemas</option>
+                  <option>Ingeniería en Redes y Telecomunicaciones</option>
+                  <option>Ingeniería Eléctrica</option>
+                  <option>Derecho</option>
+                  <option>Relaciones Internacionales</option>
+                  <option>Psicología</option>
+                </select>
+              <div class="invalid-feedback">La carrera es obligatoria</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend" style="font-weight: 500;"
+                >00</span>
+              <input
+                type="number"
+                class="form-control"
+                id="registro3"
+                placeholder="Número de registro"
+                required
+              />
+              <div class="invalid-feedback">El número de registro es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre3"
+                placeholder="Nombre(s)"
+                required
+              />
+              <div class="invalid-feedback">El nombre es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido3"
+                placeholder="Apellido(s)"
+                required
+              />
+              <div class="invalid-feedback">Los apellidos son obligatorios</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="person4" class="form-label"
+              >Datos del participante 4</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i class="bi bi-wallet-fill"></i></span>
+                <select class="form-select" id="carrera4" required>
+                  <option selected disabled value="">Escoge una carrera...</option>
+                  <option>Administración General</option>
+                  <option>Administración de Turismo</option>
+                  <option>Ingeniería Comercial</option>
+                  <option>Comercio Internacional</option>
+                  <option>Ingeniería en Marketing y Publicidad</option>
+                  <option>Contaduría Pública</option>
+                  <option>Ingeniería Financiera</option>
+                  <option>Comunicación Estratégica y Digital</option>
+                  <option>Ingeniería Industrial y Comercial</option>
+                  <option>Ingeniería en Administración Petrolera</option>
+                  <option>Ingeniería Electrónica y Sistemas</option>
+                  <option>Ingeniería Mecánica Automotriz y Agroindustrial</option>
+                  <option>Ingeniería de Sistemas</option>
+                  <option>Ingeniería en Redes y Telecomunicaciones</option>
+                  <option>Ingeniería Eléctrica</option>
+                  <option>Derecho</option>
+                  <option>Relaciones Internacionales</option>
+                  <option>Psicología</option>
+                </select>
+              <div class="invalid-feedback">La carrera es obligatoria</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend" style="font-weight: 500;"
+                >00</span>
+              <input
+                type="number"
+                class="form-control"
+                id="registro4"
+                placeholder="Número de registro"
+                required
+              />
+              <div class="invalid-feedback">El número de registro es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre4"
+                placeholder="Nombre(s)"
+                required
+              />
+              <div class="invalid-feedback">El nombre es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido4"
+                placeholder="Apellido(s)"
+                required
+              />
+              <div class="invalid-feedback">Los apellidos son obligatorios</div>
+            </div>
+          </div>
+          
           <div class="col-12">
-            <button class="btn" type="submit">Submit form</button>
+            <button class="btn" type="submit">Enviar Formulario</button>
           </div>
         </form>
       </div>
     </main>
-
-    <!-- <main>
-      <div class="container2">
-        <div class="row">
-          <div class="col-12 my-3 pt-3">
-            <img
-              src="../external/img/convocatorias/desafio.png"
-              alt="Eniun"
-              class="img-fluid"
-            />
-            <h4>Nombre</h4>
-            <h4>Celular</h4>
-          </div>
-        </div>
-      </div>
-      <div id="NombreGrp">
-        <input type="text" />
-      </div>
-    </main> -->
 
     <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
       <div class="container footer-copyright text-center">
@@ -199,6 +420,8 @@
         <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
       </div>
     </footer>
+
+    <script src="../js/validacion-forms.js"></script>
 
     <!-- external -->
     <script

@@ -5,81 +5,222 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- External -->
-    <link rel="stylesheet" href="../external/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../external/css/bootstrap-reboot.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../css/principal.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="../css/principal.css" />
 
     <!-- Jquery -->
     <script src="../external/js/jquery-3.4.1.min.js"></script>
     <title>Jets</title>
-</head>
-<body>
+  </head>
+  <body class="d-flex flex-column h-100">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a class="navbar-brand" href="#" id="titulo">JETS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
-                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="./menu.html">Inicio <span class=" sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./inscripcion_est.html">Inscripción</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./convocatorias.html">Convocatorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="logOut">Salir</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JETS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./inscripcion_est.html"
+                  >Inscripción</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cronograma_est.html">Cronograma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./convocatorias.html"
+                  >Convocatorias</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="logOut" href="../www/index.html"
+                  >Salir</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        
-        <object data="../external/pdf/CONVOCATORIA DESAFIO EXTREMO 2021.pdf" type="application/pdf" width="80%" height="80%">
-
-            <p>Tu navegador no tiene el plugin para previsualizar documentos pdf.</p>
-            <p>Puedes descargarte el archivo desde <a href="../external/pdf/CONVOCATORIA OLIMPIADAS JETS 2021.pdf">aquí</a></p>
-            
+    <main class="container-fluid">
+      <div class="container menu-convo">
+        <object
+          data="../external/pdf/CONVOCATORIA OLIMPIADAS JETS 2021.pdf"
+          type="application/pdf"
+          width="80%"
+          height="80%"
+        >
+          <p>
+            Puedes descargarte la convocatoria desde
+            <a
+              class="descargar"
+              href="../external/pdf/CONVOCATORIA OLIMPIADAS JETS 2021.pdf"
+              >aquí</a
+            >
+          </p>
         </object>
-        <div class="container2">
-            <div class="row">
-            	<div class="col-12 my-3 pt-3">
-                    <img src="../external/img/convocatorias/olimpiadas.png" alt="Eniun" class="img-fluid">
-                    <h4>Nombre</h4>
-            		<h4>Celular</h4>
-            	</div>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="nom-equipo" class="form-label">Nombre del equipo</label>
+            <input type="text" class="form-control" id="nom-equipo" required />
+            <div class="invalid-feedback">
+              Debe proporcionar el nombre de su equipo
             </div>
-        </div>
-        <div id="NombreGrp">
-            <input type="text">
-        </div>
+          </div>
+          <div class="col-md-4">
+            <label for="person1" class="form-label"
+              >Datos del participante</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i class="bi bi-wallet-fill"></i
+              ></span>
+              <select class="form-select" id="carrera" required>
+                <option selected disabled value="">
+                  Escoge una carrera...
+                </option>
+                <option value="Administración General">Administración General</option>
+                <option value="Administración de Turismo">Administración de Turismo</option>
+                <option value="Ingeniería Comercial">Ingeniería Comercial</option>
+                <option value="Comercio Internacional">Comercio Internacional</option>
+                <option value="Ingeniería en Marketing y Publicidad">Ingeniería en Marketing y Publicidad</option>
+                <option value="Contaduría Pública">Contaduría Pública</option>
+                <option value="Ingeniería Financiera">Ingeniería Financiera</option>
+                <option value="Comunicación Estratégica y Digital">Comunicación Estratégica y Digital</option>
+                <option value="Ingeniería Industrial y Comercial">Ingeniería Industrial y Comercial</option>
+                <option value="Ingeniería en Administración Petrolera">Ingeniería en Administración Petrolera</option>
+                <option value="Ingeniería Electrónica y Sistemas">Ingeniería Electrónica y Sistemas</option>
+                <option value="Ingeniería Mecánica Automotriz y Agroindustrial">Ingeniería Mecánica Automotriz y Agroindustrial</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Ingeniería en Redes y Telecomunicaciones">Ingeniería en Redes y Telecomunicaciones</option>
+                <option value="Ingeniería Eléctrica">Ingeniería Eléctrica</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Relaciones Internacionales">Relaciones Internacionales</option>
+                <option value="Psicología">Psicología</option>
+              </select>
+              <div class="invalid-feedback">La carrera es obligatoria</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span
+                class="input-group-text"
+                id="inputGroupPrepend"
+                style="font-weight: 500"
+                >00</span
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="registro"
+                placeholder="Número de registro"
+                required
+              />
+              <div class="invalid-feedback">
+                El número de registro es obligatorio
+              </div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Nombre(s)"
+                required
+              />
+              <div class="invalid-feedback">El nombre es obligatorio</div>
+            </div>
+            <br />
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"
+                ><i
+                  class="bi bi-person-fill"
+                  style="font-size: 1rem; color: black"
+                ></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                placeholder="Apellido(s)"
+                required
+              />
+              <div class="invalid-feedback">Los apellidos son obligatorios</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="btn btn-outline-success agr-participante" id="agregar">
+              <i class="bi bi-plus"></i>
+              Agregar Participante
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="container-fluid">
+              <h3>Participantes agregados:</h3>
+              <div id="lista" class="container-fluid participantes">
+
+              </div>
+            </div>
+          </div>
+         
+
+          <div class="col-12">
+            <button class="btn" id="submi" >Enviar Formulario</button>
+          </div>
+        </form>
+      </div>
     </main>
 
-    <footer class="page-footer font-small blue">
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container footer-copyright text-center">
+        <span>© 2021 Copyright:</span>
+        <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
+      </div>
+    </footer>
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2021 Copyright:
-          <a href="https://www.facebook.com/CampusVirtualUtepsa">CDTE</a>
-        </div>
-        <!-- Copyright -->
-      
-      </footer>
+    <script src="../js/validacion-forms.js"></script>
+    <script src="../js/olimpiadas-opcion.js"></script>
+
     <!-- external -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
     <script src="../external/js/bootstrap.bundle.min.js"></script>
     <script src="../external/js/sweetalert2@8.js"></script>
-</body>
+  </body>
 </html>
